@@ -103,7 +103,7 @@ def parse_keys(keys):
             raise Exception("cek must be 128-bit")
 
         parsed_keys.append(
-            cpix.ContentKey(kid=kid, cek=b64encode(b16decode(cek))))
+            cpix.ContentKey(kid=kid, cek=b64encode(b16decode(cek, True))))
     return parsed_keys
 
 
